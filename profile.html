@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Profile</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Segoe UI',sans-serif;
+  display:flex;
+  min-height:100vh;
+  background:#e8e8e8;
+}
+
+.sidebar{
+  width:120px;
+  background:#1a1a2e;
+  text-align:center;
+  padding-top:20px;
+}
+
+.brand{
+  width:44px;
+  height:44px;
+  margin:0 auto 30px;
+}
+
+.brand img{
+  width:100%;
+  height:100%;
+  border-radius:8px;
+}
+
+.sidebar a{
+  display:block;
+  padding:10px 0;
+  color:#888;
+  text-decoration:none;
+  font-size:12px;
+}
+
+.sidebar a:hover{
+  background:#333;
+  color:#fff;
+}
+
+.active{color:#fff}
+
+.logout{
+  margin-top:180px;
+  color:#666;
+}
+
+.logout:hover{color:#e74c3c}
+
+.main{
+  flex:1;
+  position:relative;
+}
+
+.card{
+  background:#fff;
+  margin:20px;
+  padding:20px;
+  border-radius:10px;
+}
+
+.tag{
+  display:inline-block;
+  background:#1a1a2e;
+  color:#fff;
+  padding:6px 15px;
+  border-radius:6px;
+  font-size:13px;
+}
+
+.sub{
+  font-size:12px;
+  color:#aaa;
+  margin:5px 0 20px;
+}
+
+.av-box{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.av{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:#c8e6f5;
+  line-height:90px;
+  margin:auto;
+  color:#555;
+  font-size:13px;
+}
+
+.av-box p{
+  font-size:10px;
+  color:#bbb;
+  margin-top:8px;
+}
+
+.info{
+  background:#f7f7f7;
+  padding:20px;
+  border-radius:8px;
+}
+
+.info h4{
+  margin-bottom:15px;
+  font-size:15px;
+}
+
+.row{
+  margin-bottom:12px;
+}
+
+.row label{
+  display:block;
+  font-size:11px;
+  color:#999;
+}
+
+.row span{
+  font-size:13px;
+  color:#222;
+}
+
+.btn-ch{
+  margin-top:10px;
+  padding:8px 15px;
+  background:#3a86ff;
+  color:#fff;
+  border:0;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.btn-ch:hover{
+  background:#2667cc;
+}
+
+.foot{
+  position:absolute;
+  bottom:20px;
+  right:20px;
+  font-size:10px;
+  color:#bbb;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+ <div class="brand">
+  <img src="logo.png">
+</div>
+
+  <a href="dashboard.html">Dashboard</a>
+  <a href="notebooks.html">Virtual Notebooks</a>
+  <a href="tasks.html">Tasks</a>
+  <a href="profile.html" class="active">Profile</a>
+
+  <a href="index.html" class="logout">Logout</a>
+</div>
+
+<div class="main">
+
+  <div class="card">
+
+    <div class="tag">PROFILE</div>
+    <p class="sub">Student Information</p>
+
+    <div class="av-box">
+      <div class="av">Photo</div>
+      <p>Choose File | No file chosen</p>
+    </div>
+
+    <div class="info">
+
+      <h4>Student Information</h4>
+
+      <div class="row">
+        <label>Student ID</label>
+        <span>10674169</span>
+      </div>
+
+      <div class="row">
+        <label>Contact Number</label>
+        <span>+639674167601</span>
+      </div>
+
+      <div class="row">
+        <label>Email Address</label>
+        <span>delacruz.j@obmontessori.edu.ph</span>
+      </div>
+
+      <div class="row">
+        <label>Gender</label>
+        <span>Male</span>
+      </div>
+
+      <div class="row">
+        <label>GPA</label>
+        <span id="gpa">-</span>
+      </div>
+
+      <button class="btn-ch"
+      onclick="alert('Change Password coming soon.')">
+      Change Password
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="foot">
+    Student Name | Grade & Section
+  </div>
+
+</div>
+
+<script>
+var math = 88;
+var science = 90;
+var english = 85;
+var filipino = 87;
+var ict = 95;
+var ve = 89;
+
+var gpa = (math + science + english + filipino + ict + ve) / 6;
+
+document.getElementById("gpa").innerHTML =
+gpa.toFixed(2);
+</script>
+
+</body>
+</html>
